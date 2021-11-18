@@ -8,7 +8,7 @@ export default class ExtrasLayer extends GameCanvasLayer {
   draw() {
     this.clearCanvas()
     if (this.settings.grid.show) {
-      this.drawGrid(this.settings.grid.size,this.settings.grid.size)
+      this.drawGrid(this.settings.grid.size, this.settings.grid.size)
     }
     if (this.settings.axis.show) {
       this.drawAxis()

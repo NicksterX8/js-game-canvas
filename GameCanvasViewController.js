@@ -25,7 +25,7 @@ export default class GameCanvasViewController {
   }
 
   setScale(scale) {
-    this.scale = scale
+    this.scale = scale / 10
     this.updateCanvasEntities()
   }
 

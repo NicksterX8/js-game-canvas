@@ -3,7 +3,7 @@ var SETTINGS = {
     color: '#233333',
   },
   
-  scale: 1,
+  scale: 10,
   entities: {
     defaultAlpha: 1.0,
     vectors: {

@@ -110,6 +110,7 @@ import ExtrasLayer from './layers/ExtrasLayer.js'
   entities = []
   addDemoEnts(200)
   
+  viewController.setScale(SETTINGS.scale)
   viewController.updateCanvasEntities(entities)
 
   let settingsTabIsOpen = false
