@@ -120,12 +120,12 @@ import ExtrasLayer from './layers/ExtrasLayer.js'
     let settingsDiv = document.querySelector(".settings")
     if (settingsTabIsOpen) {
       settingsDiv.style.display = "none"
-      devSettingsToggle.innerText = "Open Dev Settings"
+      devSettingsToggle.innerText = "Open Settings"
 
       settingsTabIsOpen = false
     } else {
       settingsDiv.style.display = "flex"
-      devSettingsToggle.innerText = "Close Dev Settings"
+      devSettingsToggle.innerText = "Close Settings"
 
       settingsTabIsOpen = true
     }
