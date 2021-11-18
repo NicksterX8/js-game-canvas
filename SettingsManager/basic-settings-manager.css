@@ -1,0 +1,85 @@
+
+#settings-wrapper {
+
+  --accent: rgb(255, 238, 0);
+  --border-color: white;
+
+  color: var(--accent);
+  text-align: center;
+  
+  border: 1px solid black;
+  box-shadow: 1px 1px 4px 2px #333333;
+
+
+  background-color: #222222;
+
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.settings-manager .settings-list {
+  border: 1px solid black;
+  color: white;
+  text-align: left;
+}
+
+.settings-manager .setting {
+  display: block;
+  margin: auto;
+
+  border-top: 1px solid black;
+}
+
+.settings-manager .setting input {
+  caret-color: white;
+}
+
+.settings-list {
+  padding: 5px;
+}
+
+.settings-manager input {
+  background-color: black;
+  color: grey;
+
+  outline: none!important;
+  box-shadow: none!important;
+  border: 1px solid white;
+
+  margin-left: 5px;
+
+}
+
+.settings-manager input[type="checkbox"] {
+  background-color: var(--accent);
+  color: var(--accent);
+
+  accent-color: var(--accent);
+}
+
+.settings-manager .setting-object-toggle {
+  float: right;
+  padding: 10px;
+}
+
+.setting .setting {
+  margin-left: 1.25em;
+  
+}
+
+.setting-object > label {
+  font-size: 20px;
+  color: var(--accent);
+}
+div.setting.setting-object, .settings-manager .settings-list {
+  border-top: 2px solid var(--border-color);;
+  border-left: 2px solid var(--border-color);
+}
+
+.setting.disabled {
+
+  pointer-events: none;
+  color: black;
+  opacity: 0.5;
+}

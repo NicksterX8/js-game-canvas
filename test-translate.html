@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <title>GameCanvas Testing</title>
+    <style>
+      #game-canvas {
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="wrapper">
+      <div id="canvas-wrapper">
+        <canvas id="game-canvas" width="500" height="500"></canvas>
+        <noscript>
+          This is a javascript HTML5 game, turn on javascript to play. 
+        </noscript>
+      </div>
+      <div class="game-ui">
+        <button id="update-button">update</button>
+        <button id="hotbar">hot</button>
+        <div class="settings-wrapper"></div>
+      </div>
+    </div>
+    
+    <!--images used in the game canvas-->
+    <div style="display:none;">
+      <img 
+        id="target-img"
+        src="https://www.myteklab.com/user_assets/913-Targetpixelart-6020c2bfb550c.png"
+      >
+      <img 
+        id="cookie-img"
+        src="https://www.myteklab.com/user_assets/913-Cookie-6168ce3b9f661.png"
+      >
+      <img
+        id="player-img"
+        src="https://www.myteklab.com/user_assets/913-Placeholderplayerart-6192f60fb12bc.png"
+      >
+    </div> 
+
+  </body>
+  <script>
+    var canvas = document.getElementById("game-canvas")
+    var ctx = canvas.getContext("2d")
+
+    let line = {
+      x: 100,
+      y: 100,
+      rotation: 45
+    }
+
+    ctx.lineWidth = 10
+    ctx.strokeStyle = 'blue'
+    ctx.moveTo(line.x, line.y)
+    ctx.lineTo(line.x + 50, line.y)
+    ctx.stroke()
+
+    ctx.translate(line.x, line.y)
+    ctx.rotate(line.rotation * Math.PI / 180)
+
+    ctx.moveTo(0, 0)
+    ctx.lineTo(50, 0)
+    ctx.stroke()
+
+    ctx.rotate(-line.rotation * Math.PI / 180)
+    ctx.translate(-line.x, -line.y)
+
+    ctx.moveTo(line.x + 200, line.y)
+    ctx.lineTo(line.x + 250, line.y)
+    ctx.stroke()
+  </script>
+</html>

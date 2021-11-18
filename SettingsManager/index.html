@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings Manager Test</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="basic-settings-manager.css">
+  </head>
+  <body>
+    <h1>settings manager test</h1>
+
+    <div class="settings-wrapper" id="settings-wrapper">
+      <h1>Settings</h1>
+    </div>
+
+    <button onclick="logSettings()">log settings</button>
+  </body>
+  <script>
+    // example object
+    var settings = {
+      all: true,
+      a: 8352,
+      b: 8,
+      c: 12,
+      bool: false,
+      d: "howdy!!",
+      str: "hello there",
+      colors: {
+        major: "red",
+        minor: "green",
+        all: true,
+        colors: {
+          major: "red",
+          minor: "green",
+          bool: false,
+        }
+      },
+      coolstuff: {
+        hi: "3287hf017dashjkd",
+        bool: true,
+        all: "hi",
+      },
+      number: 5,
+
+    }
+    let settingsManager = new SettingsManager(settings)
+    settingsManager.newManager(
+      document.querySelector('.settings-wrapper'),
+      (olddata, key, newvalue, div, oldvalue) => {
+        console.log("setting:", key, "changed from", olddata[key], "to", newvalue)
+        /*
+        if (newvalue == 12) {
+          console.log(olddata[key])
+          settingsManager.set(olddata, key, 54)
+          newvalue = 583
+        }
+        */
+      })
+    
+    function logSettings() {
+      console.log(settings)
+    }
+  </script>
+</html>
